@@ -1,19 +1,18 @@
-// You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+// This series of katas will introduce you to basics of doing geometry with computers.
 
-// The returned value must be a string, and have "***" between each of its letters.
+// Point objects have x and y attributes (X and Y in C#) attributes.
 
-// You should not remove or add elements from/to the array.
+// Write a function calculating distance between Point a and Point b.
+
+// Tests round answers to 6 decimal places.
 
 
+function distanceBetweenPoints(a, b) {
 
-function twoSort(s) {
-  
-    const sorted =  s.sort();
-    const first = sorted[0];
- 
-    for(let i = 0; i < sort[0].length; i++){
-      return first.split('').join('***') 
-      
+    return Math.sqrt( (Math.pow(a.x - b.x, 2)) + (Math.pow(a.y - b.y, 2)) )
+    
   }
 
-}
+  function distanceBetweenPoints(a, b) {
+    return Math.hypot(a.x - b.x, a.y - b.y);
+  }
