@@ -1,18 +1,12 @@
-// This series of katas will introduce you to basics of doing geometry with computers.
+// Write a function that always returns 5
 
-// Point objects have x and y attributes (X and Y in C#) attributes.
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
 
-// Write a function calculating distance between Point a and Point b.
-
-// Tests round answers to 6 decimal places.
+// Good luck :)
 
 
-function distanceBetweenPoints(a, b) {
 
-    return Math.sqrt( (Math.pow(a.x - b.x, 2)) + (Math.pow(a.y - b.y, 2)) )
-    
-  }
-
-  function distanceBetweenPoints(a, b) {
-    return Math.hypot(a.x - b.x, a.y - b.y);
-  }
+function unusualFive() {
+  let word = 'fives'
+  return word.length
+}
