@@ -1,12 +1,10 @@
-// Write a function that always returns 5
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
 
-// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+// Array can contain numbers or strings. X can be either.
 
-// Good luck :)
+// Return true if the array contains the value, false if not.
 
 
-
-function unusualFive() {
-  let word = 'fives'
-  return word.length
+function check(a, x) {
+  return a.includes(x)
 }
