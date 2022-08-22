@@ -1,10 +1,15 @@
-// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+// Count the number of occurrences of each character and return it as a list of tuples in order 
+// of appearance. For empty output return an empty list.
 
-// Array can contain numbers or strings. X can be either.
+// Example:
 
-// Return true if the array contains the value, false if not.
+// orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
 
 
-function check(a, x) {
-  return a.includes(x)
-}
+const orderedCount = str => [...new Set([...str])].map(char => [char, str.split(char).length - 1])
+
+// const orderedCount = (text) =>{
+//   // Implement me!
+//   const arr = [...new Set([...text])]
+//   return arr.map(el => [el, [...text].filter(e => e === el).length]);
+// }
