@@ -1,15 +1,9 @@
-// Count the number of occurrences of each character and return it as a list of tuples in order 
-// of appearance. For empty output return an empty list.
+// Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+// Example(Input1, Input2 --> Output)
 
-// Example:
+// [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
 
-// orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
+function divisibleBy(numbers, divisor){
+  return numbers.filter(x => x % divisor === 0)
+}
 
-
-const orderedCount = str => [...new Set([...str])].map(char => [char, str.split(char).length - 1])
-
-// const orderedCount = (text) =>{
-//   // Implement me!
-//   const arr = [...new Set([...text])]
-//   return arr.map(el => [el, [...text].filter(e => e === el).length]);
-// }
