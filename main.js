@@ -1,37 +1,36 @@
-// Not considering number 1, the integer 153 is the first integer having this property: the sum of the third-power of each of its digits is equal to 153. Take a look: 153 = 1³ + 5³ + 3³ = 1 + 125 + 27 = 153
+// The function is not returning the correct values. Can you figure out why?
 
-// The next number that experiments this particular behaviour is 370 with the same power.
+// Example (Input --> Output ):
 
-// Write the function eq_sum_powdig(), that finds the numbers below a given upper limit hMax (inclusive) that fulfills this property but with different exponents as the power for the digits.
+// 3 --> "Earth"
 
-// eq_sum_powdig(hMax, exp): ----> sequence of numbers (sorted list) (Number one should not be considered).
-
-// Let's see some cases:
-
-// eqSumPowdig(100, 2) ----> []
-
-// eqSumPowdig(1000, 2) ----> []
-
-// eqSumPowdig(200, 3) ----> [153]
-
-// eqSumPowdig(370, 3) ----> [153, 370]
-
-// Enjoy it !!
-
-function eqSumPowdig(hMax, exp) {
-  let arr = []
-  
-  for(let i = 100; i <= hMax; i++){
-  let nums = i.toString().split('')
-  let maps = nums.map(x => x ** exp)
-  let res = maps.reduce((a , b) => a + b)
-//   console.log(res)
-   if(res == i){
-      arr.push(i)
-//       console.log(i)
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury';
+      break;
+    case 2:
+      name = 'Venus';
+      break;
+    case 3:
+      name = 'Earth';
+      break;
+    case 4:
+      name = 'Mars';
+      break;
+    case 5:
+      name = 'Jupiter';
+      break;
+    case 6:
+      name = 'Saturn';
+      break;
+    case 7:
+      name = 'Uranus';
+      break;
+    case 8:
+      name = 'Neptune'
   }
-}
-  return arr
-  console.log(arr)
-
+  
+  return name;
 }
