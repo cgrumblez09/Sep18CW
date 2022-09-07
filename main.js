@@ -1,41 +1,37 @@
-// Description:
+// Not considering number 1, the integer 153 is the first integer having this property: the sum of the third-power of each of its digits is equal to 153. Take a look: 153 = 1³ + 5³ + 3³ = 1 + 125 + 27 = 153
 
-// Given the triangle of consecutive odd numbers:
+// The next number that experiments this particular behaviour is 370 with the same power.
 
-//              1
-//           3     5
-//        7     9    11
-//    13    15    17    19
-// 21    23    25    27    29
-// ...
+// Write the function eq_sum_powdig(), that finds the numbers below a given upper limit hMax (inclusive) that fulfills this property but with different exponents as the power for the digits.
 
-// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+// eq_sum_powdig(hMax, exp): ----> sequence of numbers (sorted list) (Number one should not be considered).
 
-// 1 -->  1
-// 2 --> 3 + 5 = 8
+// Let's see some cases:
 
-function rowSumOddNumbers(n) {
-  return Math.pow(n, 3);
-}
+// eqSumPowdig(100, 2) ----> []
 
-// function rowSumOddNumbers(n) {
-//   var start = n * n - n + 1;
-//   var result = 0;  
+// eqSumPowdig(1000, 2) ----> []
+
+// eqSumPowdig(200, 3) ----> [153]
+
+// eqSumPowdig(370, 3) ----> [153, 370]
+
+// Enjoy it !!
+
+function eqSumPowdig(hMax, exp) {
+  let arr = []
   
-//   for(i = 0; i < n; i++)
-//   {
-//     result =  result + (start + (i*2));
-//   }
-    
-//    return result;
-// }
+  for(let i = 100; i <= hMax; i++){
+  let nums = i.toString().split('')
+  let maps = nums.map(x => x ** exp)
+  let res = maps.reduce((a , b) => a + b)
+//   console.log(res)
+   if(res == i){
+      arr.push(i)
+//       console.log(i)
+  }
+}
+  return arr
+  console.log(arr)
 
-// function rowSumOddNumbers(n) {
-//   var first = (n*(n-1)) + 1;
-//   var result = 0;
-//   for (i = 0; i < n; i++) {
-//     result += first;
-//     first += 2;
-//   }
-//   return result;
-// }
+}
