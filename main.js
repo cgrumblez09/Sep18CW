@@ -1,36 +1,22 @@
-// The function is not returning the correct values. Can you figure out why?
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 
-// Example (Input --> Output ):
+function removeChar(str){
+  let start = str.split('').splice(1)
+  console.log(start)
+  let end = start.splice(-1, 1)
+  return start.join('')  
+};
 
-// 3 --> "Earth"
-
-function getPlanetName(id){
-  var name;
-  switch(id){
-    case 1:
-      name = 'Mercury';
-      break;
-    case 2:
-      name = 'Venus';
-      break;
-    case 3:
-      name = 'Earth';
-      break;
-    case 4:
-      name = 'Mars';
-      break;
-    case 5:
-      name = 'Jupiter';
-      break;
-    case 6:
-      name = 'Saturn';
-      break;
-    case 7:
-      name = 'Uranus';
-      break;
-    case 8:
-      name = 'Neptune'
-  }
-  
-  return name;
-}
+// function removeChar(str) {
+//   return str.slice(1, -1);
+// }
+// function removeChar(str){
+//   //You got this!
+//    str1 = str.split('');
+//    str1.shift();
+//    str1.pop();
+//    return str1.join('');
+     
+//  };
+ 
+ 
